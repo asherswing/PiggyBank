@@ -1,0 +1,53 @@
+<ion-view ng-controller="AddingMoneyCtrl">
+    <ion-pane>
+        <ion-header-bar align-title="center" class="bar-positive header-shadow">
+            <!--<div class="arrow" ng-click="backButton()" >
+                <div class="ion-arrow-left-c"  ></div>
+            </div>-->
+            <h1 class="title textmiddle"> Adding Money </h1>
+            <div class="chat">
+                <img src="img/chat.png" class="chat-img" />
+            </div>
+        </ion-header-bar>
+        <ion-content class="selection-content-stable"  overflow-scroll="false">
+          <div>
+            <h4 style="text-align:center;padding-top:14px;color: #807d7d;">How would you like to add money?</h4>
+            <p style="text-align:center;color:grey;">You can always change later.</p>
+            <div style="margin-top:40px;">
+                <p style="text-align:center;">One-off deposit</p>
+            </div>
+			<div class="btn-group btn-group-justified adding-money-padding" >
+				<a  class="btn btn-primary money {{ money== 0 ? 'money-active' : 'money-deactive'}}" ng-click="moneyClick('0')">£0</a>
+				<a  class="btn btn-primary money {{ money== 100 ? 'money-active' : 'money-deactive'}}" ng-click="moneyClick('100')" >£100</a>
+				<a  class="btn btn-primary money {{ money== 200 ? 'money-active' : 'money-deactive'}}"  ng-click="moneyClick('200')" >£200</a>
+				<a  class="btn btn-primary money {{ money == 'cus' ? 'money-active' : 'money-deactive'}}" ng-click="moneyClick('cus')">Custom..</a>
+			</div>
+			
+			
+            <div class="spacer ic-selected" data-componentid="spacer1" style="height: 100px;" data-tap-disabled="true"></div>
+            <div class="roundup">
+                <p >Round up the spare change from your card purchases to the nearest pound. <span class="ion-information-circled roundup-icon"></span></p>
+            </div>
+            <div style="text-align:center;">
+                <label class="toggle toggle-positive disable-user-behavior">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <p class="align-center-to-margin">
+                Transfer an ISA
+            </p>
+            <div class="align-center-to-margin">
+                <a class="viewtransfer" href="#">View transfer form</a>
+            </div>
+        </div>
+        </ion-content>
+        <ion-footer-bar align-title="center" class="bar-assertive " ng-click="next()">
+
+            <h1 class="title ">Next</h1>
+
+        </ion-footer-bar>
+    </ion-pane>
+</ion-view>

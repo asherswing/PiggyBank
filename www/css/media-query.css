@@ -1,0 +1,119 @@
+    /*Tablets*/
+   @media screen and (min-width: 600px)  {
+       
+        .financial-year li{
+            /*height:70px;*/
+        }
+        .financial-year li h5:nth-child(1){
+            margin-top:3px;
+            margin-bottom:5px;
+        }
+        .financial-year li h5 {
+            font-size: 16px;
+        }
+        .frequency li h5 {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .input-area {
+            padding-top: 20px;
+        }
+        .tax-list {
+            margin-top: 15px;
+        }
+         .tax-list .item{
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        
+    }
+
+    /*large portrait phones*/
+    @media screen and (min-width: 400px)  {
+/*
+        .popover-wrapper {
+            margin: 0 auto;
+            width: 80%;
+        }
+*/
+
+
+/*
+        #work-detail {
+            left:inherit!important;
+            width: 98%!important;
+            height:285px; 
+         }
+*/
+        /*
+        .popover {
+            left:inherit!important;
+            width: 80%!important;
+            height:285px; 
+         }
+*/
+        .modal .button{
+            margin-top:40px;
+        }  
+     
+        
+    }
+    /*medium portrait phones*/
+    @media screen and (max-width: 399px)  {
+/*
+        .popover {
+            height: 285px!important;
+        }
+*/
+        #work-detail {
+            height: 290px!important;
+        }
+        ion-header-bar .title{
+            font-size: 17px !important;
+        }
+        /*.font16{
+            font-size:15px;
+        }*/
+    }
+
+    @media all and (orientation: landscape)  {
+
+       #work-detail {
+            margin: 20%;
+            width: 60%;
+        }
+/*
+        .popover-wrapper {
+            margin: 0 auto;
+            width: 60%;
+        }
+*/
+
+        .popover {
+            left:inherit!important;
+            width: 60%!important; 
+        }
+
+        .warning-popup {
+            margin-top: 80px;
+        }
+/*
+        @media screen and (max-width: 599px)  {
+            .popover {
+                height: 285px!important;
+            }
+        }
+        @media screen and (min-width: 600px)  {
+            .popover {
+                height: 285px!important;
+            }
+        }
+*/
+    }
+@media (min-height: 800px) {
+  #work-detail {
+
+      height: 32%!important;
+  }
+}
+

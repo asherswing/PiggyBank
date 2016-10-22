@@ -1,0 +1,29 @@
+<ion-view  hide-back-button="true" ng-controller="loginCtrl">
+  <ion-pane>
+    <ion-content class="content-stable"  overflow-scroll="false" >
+      <div>
+        <img src="img/piggybank.png" alt="logo" class="logo" />
+      </div>
+      
+      <div class="list loginpannel" >
+            <ion-md-input placeholder="Email" highlight-color="balanced" type="email"></ion-md-input>
+            <span class="blueline"></span>
+            <ion-md-input placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
+            <span class="blueline"></span>
+            <div class="reval"> Reval</div>
+      </div>
+      <div class="login-path">
+                <div >Forgotten password</div>
+      </div>
+      </br>
+      <div class="login-path">
+                <div >Creat account</div>
+      </div> 
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-assertive " ng-click="login()">
+
+            <h1 class="title ">Login</h1>
+
+    </ion-footer-bar>
+  </ion-pane>
+</ion-view>

@@ -1,0 +1,116 @@
+<ion-view ng-controller="SelectionCtrl">
+    <ion-pane>
+        <ion-header-bar align-title="center" class="bar-positive">
+            <div class="arrow" ng-click="backButton()" >
+                <div class="ion-arrow-left-c"  ></div>
+            </div>
+            <h1 class="title textmiddle"> Confirm your selection </h1>
+            <div class="chat">
+                <img src="img/chat.png" class="chat-img" />
+            </div>
+        </ion-header-bar>
+        <ion-content class="selection-content-stable"  overflow-scroll="false">
+            <ul class="financial-year">
+                <li class="width33 border-right {{ cat == 'cau' ? 'colorchange' : ''}}" ng-click="setCat('cau')">
+                    <a>
+                        <h5 class="text-center margin-bottom0"> Cautious </h5>
+
+                    </a>
+                </li>
+                <li class="width33 border-right {{ cat == 'bal' ? 'colorchange' : ''}}" ng-click="setCat('bal')">
+                    <a>
+                        <h5 class="text-center margin-bottom0 "> Balanced </h5>
+
+                    </a>
+                </li>
+                <li class="width33 border-right {{ cat == 'adv' ? 'colorchange' : ''}}" ng-click="setCat('adv')">
+                    <a>
+                        <h5 class="text-center margin-bottom0 "> Adventurose </h5>
+
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix "></div>
+            <ion-list>
+                <ion-item>
+                    <canvas id="doughnut " class="chart chart-doughnut chart-size" chart-data="data " chart-labels="labels
+                    " chart-colors="color ">
+                    </canvas>
+                    <div class="edit ">
+                        <img src="img/edit.png " class="edit-img " />
+                    </div>
+                </ion-item>
+                </ion-item>
+            </ion-list>
+
+            <div class="row">
+                <div class="col middle ">
+                    <div class="cash-color">
+                        {{data[0]/total * 100}}%
+                    </div>
+                    <div class="fund-font">
+                        Cash Fund
+                    </div>
+                </div>
+                <div class="col middle ">
+                    <div class="gloable-color">
+                        {{data[1]/total * 100}}%
+                    </div>
+                    <div class="fund-font">
+                        Gloable Shares Fund
+                    </div>
+                </div>
+
+                <div class="col middle ">
+                    <div class="property-color">
+                        {{data[2]/total * 100}}%
+                    </div>
+                    <div class="fund-font">
+                        Property Shares Fund
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col middle ">
+                    <div class="kiid">
+                        KIID
+                    </div>
+                </div>
+                <div class="col middle ">
+                    <div class="kiid">
+                        KIID
+                    </div>
+                </div>
+
+                <div class="col middle ">
+
+                    <div class="kiid">
+                        KIID
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="selection-des">Please read the Key investor information Document(KIID) for each fund.</div>
+            </div>
+            <div class="row ">
+                <div class="col col-50 graselection">
+                    <div>
+                        View Performance
+                    </div>
+                </div>
+                <div class="col  col-50 graselection">
+                    <div>
+                        View Projection
+                    </div>
+                </div>
+
+            </div>
+        </ion-content>
+        <ion-footer-bar align-title="center" class="bar-assertive " ng-click="confirm()">
+
+            <h1 class="title ">Confirm</h1>
+
+        </ion-footer-bar>
+    </ion-pane>
+</ion-view>
